@@ -61,6 +61,21 @@ public class Product {
         return gson.toJson(this);
     }
 
+    public boolean isActive() { return active; }
+    public void setActive(boolean active) { this.active = active; }
+
+    public LocalDateTime getCreatedAt() { return createdAt; } 
+    public void setCreatedAt(LocalDateTime createdAt) { this.createdAt = createdAt; }
+
+    public Integer getCreatedBy() { return createdBy; }
+    public void setCreatedBy(Integer createdBy) { this.createdBy = createdBy; }
+
+    public LocalDateTime getUpdatedAt() { return updatedAt; }
+    public void setUpdatedAt(LocalDateTime updatedAt) { this.updatedAt = updatedAt; }
+    
+    public Integer getUpdatedBy() { return updatedBy; }
+    public void setUpdatedBy(Integer updatedBy) { this.updatedBy = updatedBy; }
+
     @Override
     public String toString() {
         return "Product{" +
