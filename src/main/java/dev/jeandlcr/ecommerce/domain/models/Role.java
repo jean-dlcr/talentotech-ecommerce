@@ -16,11 +16,12 @@ public class Role {
         this.id = id;
         this.code = code;
         this.name = name;
-        this.active = active;
+        this.active= active;
+        if(createdAt == null) createdAt = LocalDateTime.now();
         this.createdAt = createdAt;
-        this.createdBy = createdBy;
-        this.updatedAt = updatedAt;
-        this.updatedBy = updatedBy;
+        this.createdBy= createdBy;
+        this.updatedAt= updatedAt;
+        this.updatedBy= updatedBy;
     }
 
     public int getId() {

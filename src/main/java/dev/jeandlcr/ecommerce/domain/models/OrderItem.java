@@ -1,5 +1,7 @@
 package dev.jeandlcr.ecommerce.domain.models;
 
+import java.time.LocalDateTime;
+
 public class OrderItem {
 
     private int id;
@@ -8,8 +10,13 @@ public class OrderItem {
     private int quantity;
     private float price;
     private float subtotal;
+    private boolean active;
+    private LocalDateTime createdAt;
+    private Integer createdBy;
+    private LocalDateTime updatedAt;
+    private Integer updatedBy;
 
-    public OrderItem(int id, int orderId, Product product, int quantity, float price) {
+    public OrderItem(int id, int orderId, Product product, int quantity, float price, boolean active, LocalDateTime createdAt, int createdBy, LocalDateTime updatedAt, Integer updatedBy) {
         this.id = id;
         this.orderId = orderId;
         this.product = product;
@@ -41,4 +48,19 @@ public class OrderItem {
     }
 
     public float getSubtotal() { return subtotal; }
+
+    public boolean isActive() { return active; }
+    public void setActive(boolean active) { this.active = active; }
+
+    public LocalDateTime getCreatedAt() { return createdAt; } 
+    public void setCreatedAt(LocalDateTime createdAt) { this.createdAt = createdAt; }
+
+    public Integer getCreatedBy() { return createdBy; }
+    public void setCreatedBy(Integer createdBy) { this.createdBy = createdBy; }
+
+    public LocalDateTime getUpdatedAt() { return updatedAt; }
+    public void setUpdatedAt(LocalDateTime updatedAt) { this.updatedAt = updatedAt; }
+    
+    public Integer getUpdatedBy() { return updatedBy; }
+    public void setUpdatedBy(Integer updatedBy) { this.updatedBy = updatedBy; }
 }

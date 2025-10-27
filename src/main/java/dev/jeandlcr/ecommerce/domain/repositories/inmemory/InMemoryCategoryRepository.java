@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import dev.jeandlcr.ecommerce.domain.interfaces.ICategoryRepository;
-import dev.jeandlcr.ecommerce.domain.models.Brand;
 import dev.jeandlcr.ecommerce.domain.models.Category;
 
 public class InMemoryCategoryRepository implements ICategoryRepository {

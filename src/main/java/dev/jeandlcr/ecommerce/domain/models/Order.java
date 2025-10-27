@@ -30,11 +30,12 @@ public class Order {
         this.status = status;
         this.observations = observations;
         this.shippingAddress = shippingAddress;
-        this.active = active;
+        this.active= active;
+        if(createdAt == null) createdAt = LocalDateTime.now();
         this.createdAt = createdAt;
-        this.createdBy = createdBy;
-        this.updatedAt = updatedAt;
-        this.updatedBy = updatedBy;
+        this.createdBy= createdBy;
+        this.updatedAt= updatedAt;
+        this.updatedBy= updatedBy;
         this.items = new ArrayList<>();
     }
 

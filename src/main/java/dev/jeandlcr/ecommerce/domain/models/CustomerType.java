@@ -18,6 +18,7 @@ public class CustomerType {
         this.code = code;
         this.description = description;
         this.active = active;
+        if(createdAt == null) createdAt = LocalDateTime.now();
         this.createdAt = createdAt;
         this.createdBy = createdBy;
         this.updatedAt = updatedAt;

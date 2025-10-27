@@ -31,11 +31,12 @@ public class Seller {
         this.sellerCode = sellerCode;
         this.region = region;
         this.commissionRate = commissionRate;
-        this.active = active;
+        this.active= active;
+        if(createdAt == null) createdAt = LocalDateTime.now();
         this.createdAt = createdAt;
-        this.createdBy = createdBy;
-        this.updatedAt = updatedAt;
-        this.updatedBy = updatedBy;
+        this.createdBy= createdBy;
+        this.updatedAt= updatedAt;
+        this.updatedBy= updatedBy;
     }
 
     public int getId() {

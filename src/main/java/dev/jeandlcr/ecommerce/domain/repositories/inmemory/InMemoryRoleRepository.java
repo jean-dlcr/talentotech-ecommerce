@@ -57,7 +57,7 @@ public class InMemoryRoleRepository implements IRoleRepository {
 
     @Override
     public Role getRoleByCode(String code) {
-         for (Role r : roles) {
+        for (Role r : roles) {
             if (r.getCode().equalsIgnoreCase(code)) {
                 return r;
             }

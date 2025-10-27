@@ -47,6 +47,7 @@ public class User {
         this.role = role;
         this.active= active;
         if(createdAt == null) createdAt = LocalDateTime.now();
+        this.createdAt = createdAt;
         this.createdBy= createdBy;
         this.updatedAt= updatedAt;
         this.updatedBy= updatedBy;

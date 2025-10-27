@@ -3,28 +3,20 @@ package dev.jeandlcr.ecommerce.domain.repositories.inmemory;
 import java.util.ArrayList;
 import java.util.List;
 
-import dev.jeandlcr.ecommerce.core.utils.Util;
-import dev.jeandlcr.ecommerce.domain.models.Employee;
 import dev.jeandlcr.ecommerce.domain.models.Order;
-import dev.jeandlcr.ecommerce.domain.models.Seller;
-import dev.jeandlcr.ecommerce.domain.repositories.inmemory.OrderRepository;;
+import dev.jeandlcr.ecommerce.domain.repositories.inmemory.InMemoryOrderRepository;;
 
-public class OrderRepository {
+public class InMemoryOrderRepository {
 
     private final List<Order> orders = new ArrayList<>();
     private final InMemoryCustomerRepository customerRepository;
     private static int IDENTITY = 0;
 
-    public OrderRepository(InMemoryCustomerRepository customerRepository) {
+    public InMemoryOrderRepository(InMemoryCustomerRepository customerRepository) {
         this.customerRepository = customerRepository;
     }
 
     public void seed() {
-         //this.orderRepository = orderRepository;
-        // public Order(int id, Customer customer, User seller, float total, String status,
-        //          LocalDateTime createdAt, int createdBy, String observations, String shippingAddress)
-        //orders.add(new Order(1001, customerRepository.getCustomerByDocument("123444"), 5, 120.0, "Pendiente", Util.getRandomDate("2025-01-01", "2025-03-31")));
-        //orders.add(new Order(1002, customerRepository.getCustomerByDocument("123444"), 6, 85.0, "Enviado", Util.getRandomDate("2025-01-01", "2025-03-31")));
     }
 
     public List<Order> getAll() {
